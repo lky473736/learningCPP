@@ -155,6 +155,9 @@ void admin()
             
         case 2 :
             {
+                database[index][0] = '0';
+                database[index][1] = '0';
+                
                 std::string id_edit;
                 std::string pw_edit;
                 
