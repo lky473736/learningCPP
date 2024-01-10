@@ -3,7 +3,7 @@
 #include <iostream>
 #include <cmath>
 
-int main()
+int main() 
 {
     std::cout << sqrt(400) << std::endl; // 제곱근 함수
     
