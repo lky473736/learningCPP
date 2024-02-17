@@ -22,14 +22,14 @@ class Player
 {
 public :
     Player(int p, int q, int r)
-        : a{p}, b{q}, c{r}
+        : a(p), b(q), c(r)
     {   
 
     }
 
     Player()
     {
-        
+
     }
     
 private :
@@ -45,19 +45,19 @@ void display_player (Player p) // 객체를 pass by value <- 복사 생성자 �
 
 Player create_super_enemy() // 객체를 value의 형태로 반환 (이때 자료형을 클래스명으로 지정해줘야함)
 {
-    Player an_enemy{1, 1, 1};
+    Player an_enemy(1, 1, 1);
     return an_enemy; 
 } // 소멸자 작동
 
 int main()
 {
-    Player hero {0, 0, 1}; // 생성자 작동 
+    Player hero (0, 0, 1); // 생성자 작동 
     display_player(hero);
     
     Player enemy;
     enemy = create_super_enemy(); // enemy라는 빈 객체에 복사 <- 복사 생성자 작동
     
-    Player heroin {1, 1, 1};
+    Player heroin (1, 1, 1);
     Player another_heroin = heroin; // 객체를 만들면서 복사 <- 복사 생성자 작동
     
     /*  위 과정이랑 지금 과정은 아예 다르다. 초기화랑 대입은 다른 연산
@@ -70,3 +70,5 @@ int main()
         Player another_heroin {heroin};
     */
 }
+
+// 중괄호 대신 소괄호를 사용해야 할 것 같다.
