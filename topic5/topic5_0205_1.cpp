@@ -21,6 +21,16 @@
 class Player 
 {
 public :
+    Player(int p, int q, int r)
+        : a{p}, b{q}, c{r}
+    {   
+
+    }
+
+    Player()
+    {
+        
+    }
     
 private :
     int a;
