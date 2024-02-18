@@ -26,7 +26,7 @@ Deep::Deep(int d)
 }
 
 Deep::Deep(const Deep &source)
-    /*: data (source.data) // 포인터 주소값의 복사임. 포인터가 가리키는 데이터가 아님.*/
+    /*: data (source.data)s // 포인터 주소값의 복사임. 포인터가 가리키는 데이터가 아님.*/
 {
     data = new int; // heap 메모리에 동적할당을 일단은 함
     *data = *source.data; // 역참조를 이용하여 동일한 데이터를 생성
@@ -55,4 +55,4 @@ int main()
     print (s);
 
     return 0;
-} // 여기서 소멸자를 이용해서 한번 더 해제하려고 한다! (double free)
+}
